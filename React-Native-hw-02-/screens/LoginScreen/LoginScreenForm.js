@@ -1,22 +1,21 @@
 import { Text, TextInput, View,Button,StyleSheet,Image,ImageBackground } from "react-native";
 import {PhotoBG} from './Images'
 
-
-export function RegistrationScreen(){
+export function LoginScreen(){
     return(
         <View style={styles.form}>
-            <ImageBackground source={PhotoBG}/>
+           <ImageBackground source={PhotoBG}/>
             <View>
                 <Image/>
             </View>
 
-            <Text style={styles.title}>Реєстрація</Text>
-            <TextInput style={styles.input} placeholder='Логін'/>
+            <Text style={styles.title}>Увійти</Text>
+            
             <TextInput style={styles.input} placeholder='Адреса електронної пошти'/>
             <TextInput style={styles.input} placeholder='Пароль'/>
-            <Button title="Зареєстуватися" style={styles.btn_sign}/>
+            <Button title="Увійти" style={styles.btn_sign}/>
             
-            <Text style={styles.sentense}>Вже є акаунт? Увійти</Text>
+            <Text style={styles.sentence}>Немає акаунту? Зареєструватися</Text>
 
         </View>
     )
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
         color:"#FFFFFF",
         marginTop:40,  
     },
-    sentense:{
+    sentence:{
         color:"#1B4371",
         fontSize:16,
         fontWeight:400,
