@@ -10,11 +10,12 @@ export function LoginScreen(){
          <ImageBackground style={styles.image} source={require('../Images/photoBG.png')}>
             
              <KeyboardAvoidingView   behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-         <View style={{...styles.form,paddingBottom:isFocused?50:143}}>
+         <View style={{...styles.form}}>
              <Text style={styles.title}>Увійти</Text>
             
              <TextInput style={styles.input} placeholder='Адреса електронної пошти' onFocus={()=>{setIsFocused(true)}}/>
              <TextInput style={styles.input} placeholder='Пароль'onFocus={()=>{setIsFocused(true)}}/>
+             
              <TouchableOpacity style={styles.btn_sign}>
                  <Text style={styles.btn_sign_text}>Увійти</Text>
              </TouchableOpacity>
@@ -50,12 +51,14 @@ const styles = StyleSheet.create({
     },
     form:{
         padding:16,
-        marginBottom:0,
-        marginTop:"auto", 
+        // marginBottom:0,
+        marginTop:"80%", 
         backgroundColor:"#FFFFFF",
-        borderRadius:25,
+        borderTopLeftRadius:25,
+        borderTopRightRadius:25,
         alignItems: 'center',
         justifyContent: 'center',
+        paddingBottom:143,
         
     },
     btn_sign:{
@@ -71,7 +74,7 @@ const styles = StyleSheet.create({
         marginBottom:15,
        
     },
-    sentense:{
+    sentence:{
         color:"#1B4371",
         fontSize:16,
         fontWeight:400,
