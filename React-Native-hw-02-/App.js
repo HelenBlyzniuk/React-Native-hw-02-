@@ -1,9 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
+// import { useFonts } from 'expo-font';
 import { StyleSheet, View } from 'react-native';
 import { RegistrationScreen } from './screens/RegistrationScreen';
 // import { LoginScreen } from './screens/LoginScreen/LoginScreenForm';
 
 export default function App() {
+  // const [fontsLoaded] = useFonts({
+  //   'Roboto': require('./assets/fonts/Roboto.otf'),
+  // });
   return (
     <View style={styles.container}>
       
@@ -20,5 +24,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding:0,
   },
 });

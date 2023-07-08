@@ -7,13 +7,11 @@ export function RegistrationScreen(){
     const [isFocused, setIsFocused]=useState(false);
     return(
        
-        <View>
+        <View style={styles.container}>
         <ImageBackground style={styles.image} source={require('./Images/photoBG.png')}>
-            <View style={styles.photoContainer}>
-                <Image source={require('./Images/add.jpg')} style={styles.icon}/>
-            </View>
+            
             <KeyboardAvoidingView   behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-        <View style={{...styles.form,paddingBottom:isFocused?50:64}}>
+        <View style={{...styles.form,marginTop:isFocused?'50%':'70%'}}>
             <Text style={styles.title}>Реєстрація</Text>
             <TextInput style={styles.input} placeholder='Логін' onFocus={()=>{setIsFocused(true)}}/>
             <TextInput style={styles.input} placeholder='Адреса електронної пошти' onFocus={()=>{setIsFocused(true)}}/>
@@ -31,6 +29,9 @@ export function RegistrationScreen(){
     )
 }
 const styles = StyleSheet.create({
+    container:{
+        flex:1,
+    },
   
     title:{
         fontSize:30,
@@ -52,13 +53,14 @@ const styles = StyleSheet.create({
     },
     form:{
         padding:16,
-        marginBottom:0,
-        marginTop:"auto", 
+        marginBottom:0, 
         backgroundColor:"#FFFFFF",
-        borderRadius:25,
         alignItems: 'center',
         justifyContent: 'center',
-        // paddingBottom:64,
+        borderTopLeftRadius:25,
+       borderTopRightRadius:25,
+        
+        
     },
     btn_sign:{
         fontSize:16,
@@ -97,7 +99,10 @@ const styles = StyleSheet.create({
         height:120,
         borderRadius:16,
         border:1,
-        color:"#1B4371",
+        backgroundColor:"#1B4371",
+        // position:"absolute",
+        // top:"50%"
+        
 
     }
     
