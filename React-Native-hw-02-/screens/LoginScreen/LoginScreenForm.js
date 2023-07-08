@@ -108,6 +108,9 @@ const styles = StyleSheet.create({
   image: {
     height: 812,
     width: 375,
+
+    flex: 1,
+    justifyContent: "flex-end",
   },
   btn_sign_text: {
     color: "#FFFFFF",
