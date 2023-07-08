@@ -1,14 +1,13 @@
-import { Text, TextInput, View,Button,StyleSheet,Image,ImageBackground } from "react-native";
-import {PhotoBG} from './Images'
+import { Text, TextInput, View,Button,StyleSheet,ImageBackground } from "react-native";
+import PhotoBG from '../screens/photoBG.png';
+
 
 
 export function RegistrationScreen(){
     return(
         <View style={styles.form}>
-            <ImageBackground source={PhotoBG}/>
-            <View>
-                <Image/>
-            </View>
+            {/* <ImageBackground source={PhotoBG}/> */}
+            
 
             <Text style={styles.title}>Реєстрація</Text>
             <TextInput style={styles.input} placeholder='Логін'/>
