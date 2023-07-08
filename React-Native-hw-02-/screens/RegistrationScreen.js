@@ -7,7 +7,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   KeyboardAvoidingView,
-  TouchableWithoutFeedback,
+  TouchableWithoutFeedback, Dimensions
   
 } from "react-native";
 
@@ -31,9 +31,9 @@ export function RegistrationScreen() {
           >
             <View style={styles.formWrapper}>
               <View
-                style={{ ...styles.form, paddingBottom: isFocused ? 32 : 45 }}
+                style={{ ...styles.form, paddingBottom: isFocused ? 12 : 45 }}
               >
-                <View style={styles.imageContainer}>
+                <View style={{...styles.imageContainer,top:isFocused?"-5%":"-15%"}}>
                  <View style={styles.iconBtn}>
                     <TouchableOpacity>
                       <Image
@@ -112,7 +112,8 @@ const styles = StyleSheet.create({
     color: "#BDBDBD",
   },
   formWrapper: {
-    paddingTop: 92,
+    // paddingTop: 65,
+    paddingTop: 25,
     paddingLeft: 16,
     paddingRight: 16,
     backgroundColor: "#FFFFFF",
@@ -121,6 +122,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop:"30%",
     paddingBottom: 43,
+   
+   
   },
   btn_sign: {
     fontSize: 16,
@@ -153,6 +156,9 @@ const styles = StyleSheet.create({
   image: {
     height: 812,
     width: 378,
+    flex: 1,
+    justifyContent: "flex-end",
+    
   },
   btn_sign_text: {
     color: "#FFFFFF",
@@ -170,7 +176,7 @@ const styles = StyleSheet.create({
   imageContainer:{
     position: "absolute",
     left: "33%",
-    top: "-15%",
+    // top: "-15%",
     width: 120,
     height: 120,
     backgroundColor: "#F6F6F6",
