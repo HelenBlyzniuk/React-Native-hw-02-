@@ -1,21 +1,23 @@
 import { Text, TextInput, View,Image,StyleSheet,ImageBackground,TouchableOpacity,KeyboardAvoidingView } from "react-native";
 
-
+import { useState } from "react";
 
 
 export function RegistrationScreen(){
+    const [isFocused, setIsFocused]=useState(false);
     return(
+       
         <View>
         <ImageBackground style={styles.image} source={require('./Images/photoBG.png')}>
             <View style={styles.photoContainer}>
                 <Image source={require('./Images/add.jpg')} style={styles.icon}/>
             </View>
-            <KeyboardAvoidingView>
-        <View style={styles.form}>
+            <KeyboardAvoidingView   behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+        <View style={{...styles.form,paddingBottom:isFocused?50:64}}>
             <Text style={styles.title}>Реєстрація</Text>
-            <TextInput style={styles.input} placeholder='Логін'/>
-            <TextInput style={styles.input} placeholder='Адреса електронної пошти'/>
-            <TextInput style={styles.input} placeholder='Пароль'/>
+            <TextInput style={styles.input} placeholder='Логін' onFocus={()=>{setIsFocused(true)}}/>
+            <TextInput style={styles.input} placeholder='Адреса електронної пошти' onFocus={()=>{setIsFocused(true)}}/>
+            <TextInput style={styles.input} placeholder='Пароль'onFocus={()=>{setIsFocused(true)}}/>
             <TouchableOpacity style={styles.btn_sign}>
                 <Text style={styles.btn_sign_text}>Зареєстуватися</Text>
             </TouchableOpacity>
@@ -56,6 +58,7 @@ const styles = StyleSheet.create({
         borderRadius:25,
         alignItems: 'center',
         justifyContent: 'center',
+        // paddingBottom:64,
     },
     btn_sign:{
         fontSize:16,
@@ -74,7 +77,7 @@ const styles = StyleSheet.create({
         color:"#1B4371",
         fontSize:16,
         fontWeight:400,
-        marginBottom:64,
+        
     },
     image:{
        height:812,
