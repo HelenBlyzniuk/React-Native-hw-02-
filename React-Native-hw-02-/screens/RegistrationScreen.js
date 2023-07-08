@@ -110,6 +110,8 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     marginBottom: 15,
     color: "#BDBDBD",
+    fontFamily:'RobotoRegular',
+    fontStyle: "normal",
   },
   formWrapper: {
     // paddingTop: 65,
@@ -136,17 +138,21 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 51,
     marginBottom: 15,
+    fontFamily:'RobotoRegular',
+    fontStyle: "normal",
   },
   sentence: {
     textAlign:"center",
     color: "#1B4371",
     fontSize: 16,
-    fontWeight: 400,
+    fontFamily:'RobotoRegular',
+    fontStyle: "normal",
   },
   showPassword_text:{
     color: "#1B4371",
     fontSize: 16,
-    fontWeight: 400,
+    fontFamily:'RobotoRegular',
+    fontStyle: "normal",
   },
   showPassword:{
     position:"absolute",
@@ -163,6 +169,8 @@ const styles = StyleSheet.create({
   btn_sign_text: {
     color: "#FFFFFF",
     fontSize: 16,
+    fontFamily:'RobotoRegular',
+    fontStyle: "normal",
   },
   icon: {
     width: 25,

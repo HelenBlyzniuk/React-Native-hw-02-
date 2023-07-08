@@ -55,6 +55,7 @@ export function LoginScreen() {
 }
 const styles = StyleSheet.create({
   title: {
+    fontFamily:'RobotoMedium',
     fontSize: 30,
     color: "#212121",
     marginTop: 32,
@@ -71,6 +72,8 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     marginBottom: 15,
     color: "#BDBDBD",
+    fontFamily:'RobotoRegular',
+    fontStyle: "normal",
   },
   btnContainer:{
     marginBottom:143,
@@ -99,11 +102,15 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 51,
     marginBottom: 15,
+    fontFamily:'RobotoRegular',
+    fontStyle: "normal",
   },
   sentence: {
     color: "#1B4371",
     fontSize: 16,
     fontWeight: 400,
+    fontFamily:'RobotoRegular',
+    fontStyle: "normal",
   },
   image: {
     height: 812,
@@ -115,5 +122,7 @@ const styles = StyleSheet.create({
   btn_sign_text: {
     color: "#FFFFFF",
     fontSize: 16,
+    fontFamily:'RobotoRegular',
+    fontStyle: "normal",
   },
 });

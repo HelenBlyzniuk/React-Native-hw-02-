@@ -1,13 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-// import { useFonts } from 'expo-font';
+import { useFonts } from 'expo-font';
 import { StyleSheet, View } from 'react-native';
 // import { RegistrationScreen } from './screens/RegistrationScreen';
 import { LoginScreen } from './screens/LoginScreen/LoginScreenForm';
 
 export default function App() {
-  // const [fontsLoaded] = useFonts({
-  //   'Roboto': require('./assets/fonts/Roboto.otf'),
-  // });
+  const [fontsLoaded] = useFonts({
+    'RobotoBold': require("./screens/fonts/Roboto-Black.ttf"),
+    'RobotoRegular': require("./screens/fonts/Roboto-Regular.ttf"),
+    'RobotoMedium': require("./screens/fonts/Roboto-Medium.ttf"),
+  });
   return (
     <View style={styles.container}>
       
